@@ -1,0 +1,27 @@
+.serif {
+	font-family: $font-serif;
+}
+
+.offscreen {
+	position: absolute;
+	left: -1000000px;
+}
+
+.thick {
+	font-weight: $thick;
+}
+
+.btn {
+	border: none;
+	font-size: $regular-size;
+	cursor: pointer;
+	@include flex-center;
+}
+
+.none {
+	display: none;
+}
+
+.flex {
+	@include flex-center;
+}
