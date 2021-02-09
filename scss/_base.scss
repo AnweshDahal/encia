@@ -1,0 +1,106 @@
+// CSS Reset
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// Colors
+$white: #ffffff;
+$dark-gray: #292929;
+$dark-gray-1: #717171;
+$light-gray: #c7c7c7;
+$light-gray-1: #f5f5f5;
+$light-gray-2: #dfdfdf;
+$light-gray-3: #e6e6e6;
+$light-gray-4: #d9d9d9;
+$light-gray-5: #f7f7f7;
+$red: #ff0040;
+$super-green: #11ba00;
+$super-blue: #0059ff;
+
+// Fonts
+$font-sans: "Inter", sans-serif;
+$font-serif: "Playfair Display", serif;
+
+// Font sizes
+$extra-large: 2rem;
+$large: 1.5rem;
+$regular-size: 1rem;
+$medium: 0.875rem;
+$small: 0.75rem;
+
+// Font weight
+$thickest: 700;
+$thicker: 600;
+$thick: 500;
+$regular-thick: 400;
+
+// Inheritance
+%flex {
+	display: flex;
+	align-items: center;
+}
+
+// flex column mixin
+@mixin flex-column {
+	@extend %flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+// align in center of flex mixin
+@mixin flex-center {
+	@extend %flex;
+	justify-content: center;
+}
+
+// mizin for media query of min width
+@mixin mq($size) {
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}
+
+// Style for the whole html+body
+html,
+body {
+	background-color: $white;
+	color: $dark-gray;
+	width: 100vw;
+	min-height: 100vh;
+	font-family: $font-sans;
+	font-size: $regular-size;
+	overflow-x: hidden;
+}
+
+// style for main section
+main {
+	@include flex-column();
+	min-height: calc(100vh - 60px);
+}
+
+// style for footer
+footer {
+	width: 100%;
+	height: 60px;
+	background-color: $dark-gray;
+	color: $white;
+	@include flex-center();
+	flex-direction: column;
+	a {
+		text-decoration: none;
+		color: $white;
+		font-weight: $regular-thick;
+	}
+	.about-page {
+		font-size: $regular-size;
+	}
+	.about-author {
+		font-size: $small;
+		font-weight: $regular-thick;
+		@include mq(768px) {
+			font-size: $medium;
+		}
+	}
+}
