@@ -1,0 +1,102 @@
+.search-entry {
+	width: 100%;
+	min-height: 139px;
+	@include flex-column;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	.page-title {
+		width: 90vw;
+		@include mq(768px) {
+			width: 80vw;
+		}
+		.title {
+			font-family: $font-serif;
+			font-size: $extra-large;
+			font-weight: $thickest;
+			letter-spacing: -1px;
+			@include mq(768px) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.search-bar {
+		margin-top: 20px;
+		width: 90vw;
+		min-height: 42px;
+		border-bottom: 1px solid $light-gray;
+		padding-bottom: 25px;
+		@include flex-center;
+		@include mq(768px) {
+			width: 80vw;
+		}
+		.search-box {
+			margin-right: 10px;
+			background-color: $light-gray-5;
+			@extend %flex;
+			min-height: inherit;
+			width: calc(90vw - 42px);
+			border-radius: 0.25rem;
+			.search-icon {
+				width: 42px;
+				height: 42px;
+				color: $dark-gray-1;
+				@include flex-center;
+				i {
+					font-size: $large;
+				}
+			}
+			.search {
+				width: calc(100% - 84px);
+				min-height: 42px;
+				border: none;
+				outline: none;
+				background: none;
+				font-size: $regular-size;
+				font-family: $font-sans;
+				&::placeholder {
+					color: $dark-gray-1;
+				}
+			}
+			.clear {
+				height: 42px;
+				width: 42px;
+				color: $dark-gray-1;
+				outline: none;
+				i {
+					font-size: $large;
+					margin-left: 3px;
+				}
+				&::before {
+					width: 1px;
+					height: 24px;
+					background-color: $dark-gray-1;
+					content: "";
+				}
+				&:hover,
+				&:focus {
+					color: $red;
+				}
+			}
+			&:focus-within {
+				box-shadow: 0px 2px 8px 2px $light-gray-2;
+				.search-icon {
+					color: $super-green;
+				}
+			}
+		}
+		.search-btn {
+			min-width: 42px;
+			min-height: 42px;
+			outline: none;
+			background-color: $dark-gray;
+			border-radius: 0.25rem;
+			font-weight: $thicker;
+			font-size: $large;
+			color: $white;
+			&:hover,
+			&:focus {
+				box-shadow: 0px 2px 8px 2px $light-gray-2;
+			}
+		}
+	}
+}
