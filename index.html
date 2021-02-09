@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google%20Sans:wght@400;500;600;700">
+  <link rel="stylesheet" href="./dist/css/style.min.css">
+  <script src="./js/main.js" type="module"></script>
+  <title>Go Search</title>
+</head>
+
+<body>
+  <main>
+    <h1 class="offscreen">Go Search! A Wikipedia Based Search App For Wikis</h1>
+    <section class="search-entry">
+      <h2 class="offscreen">Enter a search term or phrase</h2>
+      <div class="page-title">
+        <span class="title" aria-hidden="true">Go Search!</span>
+      </div>
+      <form id="searchBar" class="search-bar" role="search">
+        <div class="search-box">
+          <label for="search" class="offscreen"></label>
+          <div class="search-icon">
+            <i class="material-icons-round">search</i>
+          </div>
+          <input type="text" id="search" class="search" autocomplete="off" role="searchbox"
+            placeholder="Search Something">
+          <div id="clear" class="none btn clear" tabindex="0" aria-label="Clear Input Field" role="button">
+            <i class="material-icons-round">clear</i>
+          </div>
+        </div>
+        <button type="submit" class="btn search-btn" id="searchBtn" aria-label="Submit Button"><i
+            class="material-icons-round">navigate_next</i></button>
+      </form>
+    </section>
+    <section class="search-results">
+      <h2 class="offscreen">Search Results</h2>
+      <div class="stats-bar">
+        <div class="stats" id="stats" aria-live="assertive"></div>
+      </div>
+      <div class="results-container" id="resultsContainer">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="about-page">
+      <span class="thick"><span aria-hidden="true">&middot;</span> Powered By </span>
+      <a href="https://www.wikipedia.com" class="serif" target="_blank">Wikipedia</a>
+      <span class="thick"><span aria-hidden="true">&middot;</span></span>
+    </div>
+    <div class="about-author">
+      <span aria-hidden="true">&middot;</span> 2021 <span aria-hidden="true">&middot;</span> Anwesh Dahal <span
+        aria-hidden="true">&middot;</span>
+    </div>
+  </footer>
+</body>
+
+</html>
