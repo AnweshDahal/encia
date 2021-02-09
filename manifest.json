@@ -1,0 +1,10 @@
+{
+	"manifest_version": 2,
+	"short_name": "go-search",
+	"name": "Go Search",
+	"author": "Anwesh Dahal",
+	"description": "A simple search app that uses the Wikipedia API for data.",
+	"version": "1.0.0",
+	"start_url": "/index.html",
+	"icons": []
+}
